@@ -59,5 +59,71 @@ public class App {
 
         System.out.println("lunghezza array words: " + words.length);
 
+        //
+        //CICLO L'ARRAY CREATO 
+        //
+        // MODO 1 - ciclo for
+        for(int i = 0; i < numbers.length; i++){
+            System.out.println("elementi ciclo for: " + numbers[i]);
+        }
+
+        //
+        // MODO 2 - ciclo for-each
+        //inizializzo il ciclo: for(condizione)
+        //dichiaro il tipo di dato ed il singolo elemento: String word:
+        //definisco l'array da ciclare
+        for(String word: words){
+            System.out.println("elementi ciclo foreach: " + word);
+        }
+
+
+        ////////////
+        //
+        // ARRAY POPOLATO
+
+        //definisco il tipo di array: int/String[]
+        //popolo di elementi: {....}
+        int[] values = {1, 2, 3, 4, 5};
+
+        System.out.println("value: " + values[0]); //stampo l'elemento all'indice 0
+
+        //cambio il valore del primo elemento
+        values[0] = 10;
+
+        System.out.println("nuovo value: " + values[0]); //stampo il nuovo elemento all'indice 0
+
+
+        //ciclo l'array
+        //
+        //ciclo for
+        for(int i = 0; i < values.length; i++){
+
+            int value = values[i];
+
+            System.out.println("singolo elemento ciclo for: " + value);
+        }
+
+        //
+        //ciclo for-each
+        for(int value: values){
+            System.out.println("singolo elemento ciclo for-each: " + value);
+        }
+
+
+        ////////////////
+        //
+        // RECUPERO ULTIMO VALORE DELL'ARRAY
+        //prendo l'array: values
+        //prendo la lunghezza dell'array: [values.length]
+        //dichiaro che parte dall'ultimo elemento: -1
+        int lastValue = values[values.length - 1];
+
+        System.out.println("ultimo elemento dell'array values: " + lastValue);
+
+
+        String lastWord = words[words.length - 1];
+
+        System.out.println("ultimo elemento dell'array words: " + lastWord);
+
     }
 }
