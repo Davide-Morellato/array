@@ -125,5 +125,125 @@ public class App {
 
         System.out.println("ultimo elemento dell'array words: " + lastWord);
 
+
+        //////////////////////////
+        //
+        //
+        // ARRAY 2D - definiti anche ARRAY MULTIDIMENSIONALI
+
+         /* come fossero tabelle
+         *
+         *           elemento[0]   elemento[1]   (...)  elemento[n]
+         * array[0]       X             Y                  ...
+         * array[1]       J             Z                  ...
+         *  (...)
+         * array[n]      ...           ...                 ...
+         * 
+         */
+
+
+        // ARRAY 2D VUOTO
+        //
+        //dichiaro il tipo di array: int/String
+        //definisco gli array: [][]
+        //creo il tipo di array: new int/String
+        //dichiaro sia quanti array devono essere sia gli elmenti che devono contenere: ES. 2 array con 3 elementi ciascuno -> [2][3]
+
+        int[][] nums = new int[2][3];
+
+        //popolo l'array creato
+        //
+        //PRENDO IL PRIMO ARRAY nums[0]
+        //popolo in base all'indice
+        nums[0][0] = 1;
+        nums[0][1] = 2;
+        nums[0][2] = 3;
+
+        //PRENDO IL SECONDO ARRAY nums[1]
+        //popolo in base all'indice
+        nums[1][0] = 1;
+        nums[1][1] = 2;
+        nums[1][2] = 3;
+
+        System.out.println("valore secondo array, primo elemento: " + nums[1][0]);
+
+        //
+        //cambio il valore del primo elemento del secondo array
+        nums[1][0] = 10;
+
+        System.out.println("nuovo valore secondo array, primo elemento: " + nums[1][0]);
+
+        //
+        //ciclo l'array
+        //
+        for(int i = 0; i < nums.length; i++){ //scorro l'array per la sua lunghezza
+            System.out.println();
+
+            for(int num = 0; num < nums[i].length; num++){ //scorro il singolo array per la sua lunghezza
+                System.out.println(nums[i][num] + " "); //prendo il valore del singolo elemento
+            }
+        }
+
+
+        String [][] strings = new String[2][3];
+
+        strings[0][0] = "Luca";
+        strings[0][1] = "Marco";
+        strings[0][2] = "Cecilia";
+
+        strings[1][0] = "Paolo";
+        strings[1][1] = "Manuel";
+        strings[1][2] = "Anna";
+
+        //
+        //CICLO FOR
+        //
+        for(int i = 0; i < strings.length; i++){ //scorro l'array per la sua lunghezza
+            System.out.println();
+
+            for(int j = 0; j < strings[i].length; j++){ //scorro il singolo array per la sua lunghezza
+                System.out.println("ciclo for: " + strings[i][j] + " "); //prendo il valore del singolo elemento
+            }
+        }
+
+
+        //
+        //CICLO FOR-EACH
+        //
+        //inizializzo il ciclo: for
+        //nella condizione dichiaro il tipo di array, il singolo array, e l'array di riferimento: String[] singolo_array: array
+        for(String[] single_array: strings){
+            System.out.println();
+
+            //inizializzo il ciclo: for
+            //mella condizione dichiaro il tipo di dato, il singolo elemento, e i singolo array di riferimento: String el: singolo_array
+            for(String element: single_array){
+                System.out.println("ciclo for-each: " + element);
+            }
+        }
+
+
+        ////////////////
+        //
+        // ARRAY 2D 
+
+        String[][] phrases = { {"Luca", "Marco", "Franco"}, {"Anna", "Cecilia", "Chiara"} }; //array di array
+
+        //ciclo for
+        for(int i = 0; i < phrases.length; i++){
+            System.out.println();
+
+            for(int j = 0; j < phrases[i].length; j++){
+                System.out.println("ciclo for: " + phrases[i][j]);
+            }
+        }
+
+        //ciclo for-each
+        for(String[] phrase: phrases){
+            System.out.println();
+            for(String quote: phrase){
+                System.out.println("ciclo for-each: " + quote);
+            }
+        }
     }
 }
