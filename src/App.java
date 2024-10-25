@@ -230,17 +230,22 @@ public class App {
         String[][] phrases = { {"Luca", "Marco", "Franco"}, {"Anna", "Cecilia", "Chiara"} }; //array di array
 
         //ciclo for
+        //scorro la lunghezza dell'array
         for(int i = 0; i < phrases.length; i++){
             System.out.println();
 
+            //accedo i singoli array contenuti nel primo, trmaite l'indice(i), e li scorro per tutta la loro lunghezza(.length)
             for(int j = 0; j < phrases[i].length; j++){
+                //stampo i valori in essi contenuti, prendendo come riferimento sia l'indice dei singoli array(i), sia l'indice per i singoli valori(j)
                 System.out.println("ciclo for: " + phrases[i][j]);
             }
         }
 
         //ciclo for-each
+        //definisco il singolo array (phrase) racchiuso nel primo array(phrases): String[] phrase
         for(String[] phrase: phrases){
             System.out.println();
+            //definisco il singolo elemento (quote) da prendere dal singolo array (phrase)
             for(String quote: phrase){
                 System.out.println("ciclo for-each: " + quote);
             }
